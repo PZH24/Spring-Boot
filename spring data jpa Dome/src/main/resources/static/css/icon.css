@@ -1,0 +1,256 @@
+.icon-blank {
+  background: url('default/images/oFloder.png') center center;
+}
+.icon-add {
+  background: url('icons/edit_add.png') no-repeat center center;
+}
+.icon-edit {
+  background: url('icons/ibase_form_edit.png') no-repeat center center;
+}
+.icon-clear {
+  background: url('icons/clear.png') no-repeat center center;
+}
+.icon-remove {
+  background: url('icons/edit_remove.png') no-repeat center center;
+}
+.icon-save {
+  background: url('icons/saveIcon.png') no-repeat center center;
+}
+.icon-cut {
+  background: url('icons/cut.png') no-repeat center center;
+}
+.icon-ok {
+  background: url('icons/openIcon.png') no-repeat center center;
+}
+.icon-no {
+  background: url('icons/no.png') no-repeat center center;
+}
+.icon-cancel {
+  background: url('icons/cancel1.png') no-repeat center center;
+}
+.icon-reload {
+  background: url('icons/reload.png') no-repeat center center;
+}
+.icon-search {
+  background: url('icons/searchIcon.png') no-repeat center center;
+}
+.icon-print {
+  background: url('icons/print.png') no-repeat center center;
+}
+.icon-help {
+  background: url('icons/help.png') no-repeat center center;
+}
+.icon-undo {
+  background: url('icons/undo.png') no-repeat center center;
+}
+.icon-redo {
+  background: url('icons/redo.png') no-repeat center center;
+}
+.icon-back {
+  background: url('icons/back.png') no-repeat center center;
+}
+.icon-sum {
+  background: url('icons/sum.png') no-repeat center center;
+}
+.icon-tip {
+  background: url('icons/tip.png') no-repeat center center;
+}
+.icon-filter {
+  background: url('icons/filter.png') no-repeat center center;
+}
+.icon-lock {
+  background: url('icons/lock.png') no-repeat center center;
+}
+.icon-more {
+  background: url('icons/more.png') no-repeat center center;
+}
+.icon-batchsubmit {
+  background: url('icons/batchsubmit.png') no-repeat center center;
+}
+.icon-situationOfCirculationIcon {
+  background: url('icons/situationOfCirculationIcon.png') no-repeat center center;
+}
+.icon-submitIcon {
+  background: url('icons/submitIcon.png') no-repeat center center;
+}
+.icon-turnToHandleIcon {
+  background: url('icons/turnToHandleIcon.png') no-repeat center center;
+}
+.icon-returnHandleIcon {
+  background: url('icons/returnHandleIcon.png') no-repeat center center;
+}
+.icon-settingListIcon {
+  background: url('icons/settingListIcon.png') no-repeat center center;
+}
+.icon-urgeHandleIcon {
+  background: url('icons/urgeHandleIcon.png') no-repeat center center;
+}
+.icon-applyHangUpIcon {
+  background: url('icons/applyHangUpIcon.png') no-repeat center center;
+}
+.icon-returnStepIcon {
+  background: url('icons/returnStepIcon.png') no-repeat center center;
+}
+.icon-superviseHandleIcon {
+  background: url('icons/superviseHandleIcon.png') no-repeat center center;
+}
+.icon-cancelSuperviseHandleIcon {
+  background: url('icons/cancelSuperviseHandleIcon.png') no-repeat center center;
+}
+.icon-wLicensingInfo {
+  background: url('icons/wLicensingInfo.png') no-repeat center center;
+}
+.icon-applyHangUpIcon {
+  background: url('icons/applyHangUpIcon.png') no-repeat center center;
+}
+.icon-confirmHangUpIcon {
+  background: url('icons/confirmHangUpIcon.png') no-repeat center center;
+}
+.icon-relieveHangUpIcon {
+  background: url('icons/relieveHangUpIcon.png') no-repeat center center;
+}
+.icon-jumpIcon {
+  background: url('icons/jumpIcon.png') no-repeat center center;
+}
+.icon-takeBackIcon {
+  background: url('icons/takeBackIcon.png') no-repeat center center;
+}
+.icon-checkProcessIcon {
+  background: url('icons/checkProcessIcon.png') no-repeat center center;
+}
+.icon-openIcon {
+  background: url('icons/openIcon.png') no-repeat center center;
+}
+.icon-searchIcon {
+  background: url('icons/searchIcon.png') no-repeat center center;
+}
+.icon-checkIcon {
+  background: url('icons/checkIcon.png') no-repeat center center;
+}
+.icon-rootIcon {
+  background: url('icons/rootIcon.png') no-repeat center center;
+}
+.icon-guideIcon {
+  background: url('icons/guideIcon.png') no-repeat center center;
+}
+.icon-newModelIcon {
+  background: url('icons/newModelIcon.png') no-repeat center center;
+}
+.icon-releaseModelIcon {
+  background: url('icons/releaseModelIcon.png') no-repeat center center;
+}
+.treeIcon-version {
+  background: url('icons/workFlowVersion.png') no-repeat center center !important;
+}
+.treeIcon-draft {
+  background: url('icons/workFlowDraft.png') no-repeat center center !important;
+}
+.icon-mini-add {
+  background: url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit {
+  background: url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh {
+  background: url('icons/mini_refresh.png') no-repeat center center;
+}
+.icon-large-picture {
+  background: url('icons/large_picture.png') no-repeat center center;
+}
+.icon-large-clipart {
+  background: url('icons/large_clipart.png') no-repeat center center;
+}
+.icon-large-shapes {
+  background: url('icons/large_shapes.png') no-repeat center center;
+}
+.icon-large-smartart {
+  background: url('icons/large_smartart.png') no-repeat center center;
+}
+.icon-large-chart {
+  background: url('icons/large_chart.png') no-repeat center center;
+}
+/* ----------- IbaseIcon ---------*/
+.icon-man {
+  background: url('icons/man.png') no-repeat center center !important;
+}
+.icon-dept {
+  background: url('icons/dept.png') no-repeat center center !important;
+}
+.icon-post {
+  background: url('icons/post.png') no-repeat center center !important;
+}
+.icon-sysrole {
+  background: url('icons/sysrole.png') no-repeat center center !important;
+}
+.icon-myrole {
+  background: url('icons/myrole.png') no-repeat center center !important;
+}
+.icon-remind {
+  background: url('icons/remind.png') no-repeat center center !important;
+}
+.icon-transfer {
+  background: url('icons/transfer.png') no-repeat center center !important;
+}
+.icon-syscata {
+  background: url('icons/syscata.png') no-repeat center center !important;
+  width: 18px;
+  height: 18px;
+}
+.icon-sysnode {
+  background: url('icons/sysnode.png') no-repeat center center !important;
+  width: 18px;
+  height: 18px;
+}
+.icon-modnode {
+  background: url('icons/modnode.png') no-repeat center center !important;
+  width: 18px;
+  height: 18px;
+}
+.icon-form {
+  background: url('icons/form.png') no-repeat center center !important;
+}
+.icon-busitem {
+  background: url('default/images/treeFile.png') no-repeat center center !important;
+}
+.icon-copyBus {
+  background: url('icons/copyBus.png') no-repeat center center;
+}
+.icon-export1 {
+  background: url('icons/export1.png') no-repeat center center;
+}
+.icon-import1 {
+  background: url('icons/import1.png') no-repeat center center;
+}
+.icon-modelManage {
+  background: url('icons/modelManage.png') no-repeat center center;
+}
+.icon-modelPrivilege {
+  background: url('icons/modelPrivilege.png') no-repeat center center;
+}
+.icon-newDepartment {
+  background: url('icons/newDepartment.png') no-repeat center center;
+}
+.icon-newPerson {
+  background: url('icons/newPerson.png') no-repeat center center;
+}
+.icon-newPost {
+  background: url('icons/newPost.png') no-repeat center center;
+}
+.icon-newRole {
+  background: url('icons/newRole.png') no-repeat center center;
+}
+.icon-printList {
+  background: url('icons/printList.png') no-repeat center center;
+}
+.icon-repeal {
+  background: url('icons/repeal.png') no-repeat center center;
+}
+.icon-setUser {
+  background: url('icons/setUser.png') no-repeat center center;
+}
+.icon-up {
+  background: url('icons/up.png') no-repeat center center;
+}
+.icon-down {
+  background: url('icons/down.png') no-repeat center center;
+}

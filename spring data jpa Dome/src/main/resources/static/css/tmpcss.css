@@ -1,0 +1,564 @@
+/**
+注意： 本样式文件由 less便已生成，所以需要在tmpcss.less文件内部修改。
+tip: 文件的路径不可写为绝对路径，请参照tmpcss.less内其他的图片路径来参照去写。
+ */
+* {
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 14px;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+}
+.st_tabHead {
+  display: none;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+.icon_expand:hover {
+  background-color: #dadada;
+}
+.icon_expand.sel {
+  background-color: #dadada;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.st-container .st-pusher .st-content .st_tab .st_tab_txt {
+  font-size: 0.2rem;
+  text-align: center;
+  margin-left:120px;
+}
+.box_right {
+  position: fixed;
+  border: 1px solid #b5b5b5;
+  border-right: 0px;
+  width: 2rem;
+  min-height: 4rem;
+  right: -100%;
+  left: initial;
+  top: 88px;
+  background-color: #FFF;
+  transition: right 0.5s;
+  box-sizing: border-box;
+  z-index: 999;
+  display: none;
+}
+@media screen and (min-width: 0) and (max-width: 1024px) {
+  .box_right {
+    display: block;
+  }
+  .icon_home2 {
+    background-size: 30px;
+  }
+  .st-container .st-pusher .st-content .st_tab .st_tab_txt {
+    display: block;
+    width: 100%;
+  }
+  .st-container .st-pusher .st-content .st_tab .st_tabHead {
+    display: block;
+    float: left;
+  }
+}
+.col2 tr td:first-child {
+  width: 120px;
+  text-align: right;
+  height: 30px;
+}
+.col4 tr {
+  height: 35px;
+}
+.col4 tr td:nth-child(2n-1) {
+  width: 15%;
+  text-align: right;
+}
+.col4 tr td:nth-child(2n) {
+  width: 35%;
+}
+.ib_layout_tools {
+  width: 100%;
+}
+/*在有嵌套表格时，为了防止样式被递归使用，需要单独对table/tr/td设置的样式*/
+.col4_tr {
+  height: 35px;
+}
+.col4_tdtitle {
+  width: 15%;
+  text-align: right;
+}
+.col4_tdcont {
+  width: 35%;
+}
+.col4_tdspan3cont {
+  width: 85%;
+}
+.text-align-r {
+  text-align: right;
+  padding-left: 10px;
+}
+.btn-style {
+  min-width: 50px;
+  height: 23px;
+  border: 1px solid #ccc;
+  background: no-repeat 5px center #FFF;
+  font-size: 14px;
+  line-height: 23px;
+  padding: 0px 5px;
+  text-indent: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn-style.cancel {
+  background-image: url("../images/common/cancel01.png");
+}
+.btn-style.expand {
+  background-image: url("../images/common/expand.png");
+}
+.btn-style.expand.extrue {
+  background-image: url("../images/common/expand-no.png");
+}
+.btn-style:hover {
+  background-color: #e2e2e2;
+}
+.formselectorul {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  bottom: 25px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+.formselectorul li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.formselectorul li:hover {
+  background-color: #eaf2ff;
+}
+.formselectorul li input[type=checkbox] {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+/* 控件旁的checkbox */
+.cbstyle {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+  margin: 1px;
+}
+.mr5 {
+  margin-right: 5px;
+  min-width: 30px;
+}
+/* 提示框 */
+.tip {
+  position: absolute;
+  border: 1px solid #c7c7c7;
+  padding: 0px 5px;
+  line-height: 23px;
+  z-index: 100;
+  background-color: #FFF;
+  font-size: 13px;
+  white-space: nowrap;
+  color: #737373;
+}
+/* 加载页面的动画 */
+.ib_loadingDiv {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(238, 238, 238, 0.8);
+  text-align: center;
+  z-index: 1000;
+}
+.ib_loadingDiv .ib_loadingImg {
+  margin-top: 30%;
+}
+/* 主页面标签的批量处理弹出菜单工具*/
+.ib_rkmenubox {
+  width: 100px;
+  border: 1px solid #ddd;
+  position: absolute;
+  z-index: 999;
+  background: #fff;
+}
+.ib_rkmenubox .ib_rkmenuitem {
+  line-height: 25px;
+  cursor: pointer;
+  padding: 0px 5px;
+  font-size: 14px;
+}
+.ib_rkmenubox .ib_rkmenuitem:hover {
+  background: #f4f4f4;
+}
+/* tree节点显示节点的数量 */
+.countTip {
+  background: #777;
+  color: #FFF;
+  border-radius: 10px;
+  text-align: center;
+  padding: 2px 7px;
+  min-width: 10px;
+  font-family: arial;
+}
+/* UEditor里添加的验证提示Div */
+.validateBox {
+  position: absolute;
+  bottom: 1px;
+  line-height: 30px;
+  width: 100%;
+  z-index: 9999;
+  text-indent: 10px;
+  display: none;
+  opacity: .6;
+  font-weight: bold;
+}
+.validateBox .closeValdateTxt {
+  width: 16px;
+  height: 16px;
+  background: url("../images/common/cancel01.png");
+  float: right;
+  margin: 5px;
+  cursor: pointer;
+}
+.validateBox #validateTxt {
+  float: left;
+}
+/* 表单选择模块的表单头部选择项 */
+.curFormInfoHeadBox {
+  width: 100%;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.curFormInfoHead {
+  height: 100%;
+  line-height: 33px;
+  margin: 0;
+  padding: 0;
+}
+.curFormInfoHead .fs_item {
+  display: inline-block;
+  padding: 0px 10px;
+  cursor: pointer;
+  border-right: 1px solid #ddd;
+  margin-right: -1px;
+}
+.curFormInfoHead .fs_item.sel {
+  background: #b6d7ff;
+}
+.iframeBox {
+  position: absolute;
+  top: 35px;
+  bottom: 0px;
+  width: 100%;
+}
+.iframeBox .formselector-iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+/* 关于模板Ftl里的样式 */
+.ibase_radio,
+.ibase_checkbox {
+  display: inline-block;
+}
+.wdate-txtbox-invalid {
+  border: 1px solid #ffa8a8 !important;
+  background-color: #fff3f3 !important;
+}
+/* reset easyui's style */
+span.textbox {
+  border-radius: 0px;
+  height: 24px;
+  background-color: transparent;
+}
+span.textbox .textbox-text {
+  background: transparent;
+  box-sizing: border-box;
+}
+span.textbox .isMultiline {
+  /* text-align:center; */
+}
+span.combo {
+  /* border:1px solid #bbb; */
+  height: 24px;
+}
+span.combo .textbox-icon.combo-arrow {
+  background-image: url("../images/easyui-img/combo_arrow.png");
+  background-color: #f5f5f5;
+}
+span.combo .textbox-icon.combo-arrow:hover {
+  background-color: #eafff8;
+}
+/* easyui 验证样式修改 */
+span.textbox-invalid,
+span.textbox-invalid.combo {
+  border: 1px solid #ffa8a8;
+  background-color: #fff3f3;
+}
+.textbox-invalid-important {
+  background-color: #ffd3d3!important;
+}
+span.textbox-readonly {
+  background-color: #f4f4f4;
+}
+a.easyui-linkbutton.l-btn {
+  border-radius: 0px;
+}
+.unsuccessRegister{
+  background: #a7a7a7 !important;
+}
+.unsuccessRegister:hover{
+  background: #a7a7a7 !important;
+}
+
+.panel {
+  font-size: 14px;
+}
+.panel.window .panel-header .panel-title {
+  font-size: 14px;
+}
+.panel .panel-header .panel-title {
+  font-size: 14px;
+}
+.panel-header,
+.panel-body {
+  border-color: #d3d3d3;
+}
+.panel-footer .textbox.searchbox {
+  border: 0px;
+}
+/* easyui-tree 样式修改 */
+.easyui-tree .tree-node {
+  height: initial;
+  padding: 5.5px 5px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: -1px;
+  color: #343434;
+}
+.easyui-tree .tree-node.tree-node-selected {
+  background: #88c3d5;
+  color: #FFF;
+}
+.easyui-tree .tree-node .tree-title {
+  font-size: 14px;
+}
+.easyui-tree .tree-node .tree-title a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+/* easyui-datagrid 样式修改 */
+.datagrid .datagrid-row-alt {
+  background: #f1f8fc;
+}
+.datagrid .datagrid-row.datagrid-row-over {
+  background: #eaf2ff !important;
+}
+.datagrid .datagrid-row.datagrid-row-selected {
+  background: #ffe48d !important;
+}
+.datagrid-cell {
+  font-size: 14px;
+  min-height: 28px;
+  line-height: 28px !important;
+}
+.datagrid .datagrid-cell-rownumber {
+  min-height: 28px;
+  line-height: 28px;
+}
+.datagrid-header td,
+.datagrid-body td,
+.datagrid-footer td {
+  border-color: #ddd;
+  border-style: solid;
+}
+.pagination .pagination-num {
+  width: 50px !important;
+}
+/* easyui-linkbutton 样式修改 */
+.easyui-linkbutton .l-btn-text {
+  font-size: 14px;
+}
+.horline {
+  width: 100%;
+  height: 1px;
+  background-color: #d3d3d3;
+  margin: 5px 0px;
+}
+/* 工作流设计器弹出框的样式修改 */
+.modal-dialog .modal-content {
+  background-color: #E0ECFF;
+  background: -webkit-linear-gradient(top, #EFF5FF 0, #E0ECFF 20%);
+  background: linear-gradient(to bottom, #EFF5FF 0, #E0ECFF 20%);
+  background-repeat: repeat-x;
+}
+.Rstyle {
+  background-color: #f4f4f4;
+}
+/* 蒙板的样式 */
+.maskbox {
+  border: 2px solid #ff0000;
+  background: #f8ecda;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+.shadeMask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(228, 248, 231, 0.5);
+}
+.shadeMask .loadingTxt {
+  background-image: url("../images/common/loading.gif");
+  background-repeat: no-repeat;
+  background-position: left center;
+  text-indent: 40px;
+  width: 240px;
+  height: 31px;
+  line-height: 31px;
+  margin: 230px auto 0 auto;
+  font-size: 16px;
+}
+/* icon's url */
+.icon-commit {
+  background-image: url("../css/icons/export.png");
+}
+.icon-ibase_form_add {
+  background-image: url("../css/icons/ibase_form_add.png");
+}
+.icon-ibase_form_edit {
+  background-image: url("../css/icons/ibase_form_edit.png");
+}
+.icon-ibase_form_go {
+  background-image: url("../css/icons/ibase_go.png");
+}
+.icon-ibase_form_double {
+  background-image: url("../css/icons/ibase_form_double.png");
+}
+.icon-ibase_form_high {
+  background-image: url("../css/icons/ibase_form_high.png");
+}
+.icon-ibase_form_link {
+  background-image: url("../css/icons/ibase_form_link.png");
+}
+.icon-ibase_form_delete {
+  background-image: url("../css/icons/ibase_form_delete.png");
+}
+.icon-ibase_form_hangup {
+  background-image: url("../css/icons/ibase_form_hangup.png");
+}
+.icon-form {
+  background-image: url("../css/icons/logo_dba.png");
+  background-size: 16px;
+}
+.icon-ibase_tools_qianshou {
+  background-image: url("../images/icons/qianshou.png");
+}
+.icon-ibase_tools_chehui {
+  background-image: url("../images/icons/chehui.png");
+}
+.icon-ibase_tools_chongban {
+  background-image: url("../images/icons/chongban.png");
+}
+.icon-ibase_tools_xmdw {
+  background-image: url("../images/icons/xmdw.png");
+}
+.icon-ibase_tools_xzxm {
+  background-image: url("../images/icons/xzxm.png");
+}
+.icon-ibase_tools_goup {
+  background-image: url("../images/icons/goUp.png");
+}
+.icon-ibase_tools_godown {
+  background-image: url("../images/icons/goDw.png");
+}
+.icon-pencil {
+  background: url("/mainWeb/images/icons/batchsubmit.png");
+}
+.icon-ibase_quanxuan {
+  background-image: url("../images/icons/ibase_quanxuan.png");
+}
+.icon-ibase_quanclear {
+  background-image: url("../images/icons/ibase_quanclear.png");
+}
+.icon-import {
+  background-image: url("../css/icons/import.png");
+}
+.icon-download {
+  background-image: url("../css/icons/download.png");
+}
+.icon-ibase-closeX {
+  background: url("/mainWeb/images/sprite/close.png") center;
+  width: 30px;
+  height: 30px;
+  float: right;
+  display: inline-block;
+  margin-top: 2px;
+  margin-right: -10px;
+}
+.icon-ibase-closeX:hover {
+  background-image: url("/mainWeb/images/sprite/close2.png");
+}
+.ibase_iconBtn {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.ibase_iconUp {
+  background-image: url("../images/icons/ibase_up.png");
+}
+.ibase_iconDown {
+  background-image: url("../images/icons/ibase_down.png");
+}
+.ibase_iconBtn:hover {
+  background-color: #f3f3f3;
+  border: 1px solid #CCC;
+}
+.tree-file {
+  background: url('default/images/treeFile.png') no-repeat center center;
+}
+.tree-folder {
+  background: url('default/images/floder.png') no-repeat center center;
+}
+.tree-folder-open {
+  background: url('default/images/oFloder.png') no-repeat center center;
+}
+.searchbox-button {
+  background: url('default/images/searchBtn.png') no-repeat center center;
+}
