@@ -20,9 +20,9 @@ public class UserService implements IUserService {
        return true;
     }
     @Override
-    public void delete(String rid) {
+    public void delete(Long rid) {
 
-            userInfoDao.deleteById(rid);
+            userInfoDao.delete(getUserInfoById(rid));
     }
 
     @Override
@@ -51,5 +51,10 @@ public class UserService implements IUserService {
                break;
        }
        return result;
+    }
+
+    @Override
+    public UserInfo getUserInfoById(long id) {
+      return userInfoDao.findByRid(id);
     }
 }

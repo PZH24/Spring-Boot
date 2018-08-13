@@ -13,6 +13,16 @@ public class UserInfo {
     private  String userName;
     private  String password;
     private  int rigth;
+    public  UserInfo (long rid,String userName,String password,int rigth){
+        this.rid=rid;
+        this.userName=userName;
+        this.password=password;
+        this.rigth=rigth;
+
+    }
+    public  UserInfo(){
+
+    }
     @Id
     @GeneratedValue
     public Long getRid() {

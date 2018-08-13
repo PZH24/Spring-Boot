@@ -13,7 +13,8 @@ public interface IUserInfoDao extends PagingAndSortingRepository<UserInfo,String
      */
     public static final String DAO_BEAN_NAME = "userInfoDao";
     UserInfo findUserInfoByUserNameAndPassword(String userName,String password);
-
+    UserInfo findByRid(long rid);
+    void deleteByRid(long rid);
 //    /*******添加新用户********/
 //    @Insert("insert into user(name,age,phone) values (#{name},#{age},#{phone})")
 //    public int addUser(UserInfo user);
