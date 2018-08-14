@@ -22,11 +22,7 @@ public class RestTestController {
     public UserInfo getUserInfoById(@PathVariable long id){
         return userService.getUserInfoById(id);
     }
-//    /** 更新*/
-//    @RequestMapping(method = RequestMethod.PUT)
-//    public void saveUserInfo(UserInfo userInfo){
-//        userService.addOrUpdateUser(userInfo);
-//    }
+
     /** 更新*/
     @RequestMapping(value = "/{id}" ,method = RequestMethod.PUT)
     public void updateUserInfo(@PathVariable long id, @RequestParam String userName,@RequestParam String passWord, @RequestParam (defaultValue ="0")int rigth){
@@ -37,7 +33,7 @@ public class RestTestController {
      * 新增
      * */
     @RequestMapping(method = RequestMethod.POST)
-    public void addUserInfo(UserInfo userInfo){
+    public void addUserInfo(@RequestBody UserInfo userInfo){
         userService.addOrUpdateUser(userInfo);
     }
     /**删除
@@ -50,5 +46,10 @@ public class RestTestController {
     @RequestMapping(value = "/{n}/{p}",method = RequestMethod.GET)
     public String checkUserNameAndPassword(@PathVariable("n")String username,@PathVariable ("p")String password) {
         return  userService.isLogin(username,password);
+    }
+        /** 更新*/
+    @RequestMapping(value = "/saveUserInfo",method = RequestMethod.PUT)
+    public void saveUserInfo(@RequestBody UserInfo userInfo){
+        userService.addOrUpdateUser(userInfo);
     }
 }
