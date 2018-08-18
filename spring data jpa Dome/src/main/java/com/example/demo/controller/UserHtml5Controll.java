@@ -25,4 +25,8 @@ public class UserHtml5Controll {
     public String regiter() {
         return "regiter";
     }
+    @RequestMapping("/chatRoom")
+    public String chatRoom(){
+        return "chatRoom";
+    }
 }
