@@ -1,7 +1,0 @@
-com\example\demo\controller\UserController.class
-com\example\demo\entity\UserInfo.class
-com\example\demo\config\JapRepositoryConfig.class
-com\example\demo\DemoApplication.class
-com\example\demo\dao\IUserInfoDao.class
-com\example\demo\service\UserService.class
-com\example\demo\pojo\IUserService.class
