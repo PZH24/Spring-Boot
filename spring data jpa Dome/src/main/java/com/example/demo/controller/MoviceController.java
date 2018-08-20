@@ -36,7 +36,7 @@ public class MoviceController {
     }
     @GetMapping("/80s/{url}")
     public void get80sMovicelist(String url){
-        url="http://www.80s.la/movie/list/-2015----p";
+        url="https://www.80s.tw/movie/list/q----";
        movice80sService.get80sMovicelist(url);
     }
     @GetMapping("/sq/{url}")

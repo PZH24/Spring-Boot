@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+import javax.persistence.Entity;
+
+//@Entity
 public class WebSocketInfo {
     private  String name;
     private  String message;

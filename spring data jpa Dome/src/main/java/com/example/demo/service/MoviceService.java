@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.Utils.HttpRequestUtil;
+import com.example.demo.utils.HttpRequestUtil;
 import com.example.demo.dao.IMovieDao;
 import com.example.demo.entity.MovieInfo;
 import com.example.demo.pojo.IMoviceService;

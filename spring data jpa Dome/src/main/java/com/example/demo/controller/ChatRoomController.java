@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.example.demo.Utils.WebSocketUtil.seesionMap;
-import static com.example.demo.Utils.WebSocketUtil.sendMessageToALL;
-import static com.example.demo.Utils.WebSocketUtil.sendMessagee;
+import static com.example.demo.utils.WebSocketUtil.seesionMap;
+import static com.example.demo.utils.WebSocketUtil.sendMessageToALL;
+import static com.example.demo.utils.WebSocketUtil.sendMessagee;
 
 @RestController
 @ServerEndpoint("/chatRoom/{username}")
