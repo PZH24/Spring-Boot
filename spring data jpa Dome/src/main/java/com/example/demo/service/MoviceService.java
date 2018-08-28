@@ -99,7 +99,6 @@ public class MoviceService implements IMoviceService {
 
     @Override
     public void reptileSQW(String url, List<MovieInfo> movieInfoList) {
-          url ="https://video.eyny.com/channel/UCXVtaFCKWX";
 //        url ="https://video.eyny.com/watch?v=sDVH7TRqR0h";
         try {
             //具体播放的地址 doc.getElementsByTag("video").get(0).childNode(0).attributes().get("src");

@@ -2,6 +2,9 @@ package com.example.demo.controller;
 import com.example.demo.entity.UserInfo;
 import com.example.demo.pojo.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,8 +43,8 @@ public class RestTestController {
      * */
     @RequestMapping(value = "/{rid}",method = RequestMethod.DELETE)
     public void deleteUserInfo(@PathVariable("rid") long id ){
-         userService.delete(id);
-//        System.out.println(id+"执行删除操作");
+//         userService.delete(id);
+        System.out.println(id+"执行删除操作");
     }
     @RequestMapping(value = "/{n}/{p}",method = RequestMethod.GET)
     public String checkUserNameAndPassword(@PathVariable("n")String username,@PathVariable ("p")String password) {

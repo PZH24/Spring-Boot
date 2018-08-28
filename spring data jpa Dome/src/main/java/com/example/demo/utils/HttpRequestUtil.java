@@ -52,8 +52,8 @@ public class HttpRequestUtil {
         connection.setRequestProperty("Accept-Charset", "utf-8");
         connection.setDoInput(true);
         connection.connect();
-        if(connection.getResponseCode()!=200)
-            return null;
+//        if(connection.getResponseCode()==301)
+//           connectionHttp(connection.getURL())
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
         return bufferedReader;
     }
@@ -141,7 +141,6 @@ public class HttpRequestUtil {
         catch (Exception e){
             e.printStackTrace();
         }
-        System.out.println("下载开始时间"+System.currentTimeMillis());
     }
     private static  HttpURLConnection connection(String urlStr) {
         try {

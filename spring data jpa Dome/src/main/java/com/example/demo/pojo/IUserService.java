@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IUserService {
     //新增或者修改用户信息
-    boolean addOrUpdateUser(UserInfo userInfo);
+    UserInfo addOrUpdateUser(UserInfo userInfo);
     //删除用户信息
     void  delete(Long rid);
     //获取用户信息

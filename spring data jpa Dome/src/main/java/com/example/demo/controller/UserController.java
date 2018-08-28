@@ -23,7 +23,7 @@ public class UserController {
         userInfo.setRigth(rigth);
         //"redirect：":表示重定向、
         //当它发现视图格式中以“forward:”作为前缀时，请求将会前往（forward）指定的URL路径
-       return userService.addOrUpdateUser(userInfo);
+       return userService.addOrUpdateUser(userInfo)!=null?true:false;
     }
     @RequestMapping("/getAllUserInfo")
     public Object getAllUserInfo(){

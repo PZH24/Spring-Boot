@@ -6,6 +6,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -32,7 +33,8 @@ public class RestTemplateController {
                 restTemplate.put(URI.create(this.userServicePath+"saveUserInfo"),userInfo);
         }
         @DeleteMapping("template/{id}")
-        public  void  deleteUserInfo(@PathVariable String id){
+        @CacheEvict(value = "userinfo",key = "#id")
+        public  void  deleteUserInfo(@PathVariable Long id){
                 restTemplate.delete(URI.create(this.userServicePath+id));
         }
         @PostMapping("template/{id}")

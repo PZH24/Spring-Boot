@@ -4,6 +4,9 @@ import com.example.demo.dao.IUserInfoDao;
 import com.example.demo.entity.UserInfo;
 import com.example.demo.pojo.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,16 +16,16 @@ public class UserService implements IUserService {
     @Autowired
     private IUserInfoDao userInfoDao;
     @Override
-    public boolean addOrUpdateUser(UserInfo userInfo) {
+    @CachePut(value = "userinfo",key = "#result.rid")
+    public UserInfo addOrUpdateUser(UserInfo userInfo) {
        UserInfo a= userInfoDao.save(userInfo);
-       if(a==null)
-           return false;
-       return true;
+       return a;
     }
     @Override
-    public void delete(Long rid) {
-
-            userInfoDao.delete(getUserInfoById(rid));
+//    @CacheEvict(value = "userinfo",key = "#id")
+    public void delete(Long id) {
+        System.out.println(id+"执行删除操作");
+            //userInfoDao.delete(getUserInfoById(rid));
     }
 
     @Override
@@ -54,6 +57,7 @@ public class UserService implements IUserService {
     }
 
     @Override
+    @Cacheable(value = "userinfo",key = "#id")
     public UserInfo getUserInfoById(long id) {
       return userInfoDao.findByRid(id);
     }
