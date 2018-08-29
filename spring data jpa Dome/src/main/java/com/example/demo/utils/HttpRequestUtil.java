@@ -58,8 +58,6 @@ public class HttpRequestUtil {
         return bufferedReader;
     }
     public  static void downLoadMoviceFromUrl(String urlStr,String fileName,String savePath) {
-//        https://video.eyny.com//watch?v=EuJbfHUB7wP
-        //        urlStr ="https://video.eyny.com/watch?v=sDVH7TRqR0h";
         try {
             HttpURLConnection conn =connection(urlStr);
            int size = conn.getContentLength();

@@ -99,7 +99,6 @@ public class MoviceService implements IMoviceService {
 
     @Override
     public void reptileSQW(String url, List<MovieInfo> movieInfoList) {
-//        url ="https://video.eyny.com/watch?v=sDVH7TRqR0h";
         try {
             //具体播放的地址 doc.getElementsByTag("video").get(0).childNode(0).attributes().get("src");
             //跳转播放页 doc.getElementsByClass("img_div_width").get(0).getElementsByTag("p").get(0).childNode(0).attributes.get("href")
@@ -136,10 +135,6 @@ public class MoviceService implements IMoviceService {
 
     @Override
     public void downLoadMoviceFromUrl(String urlStr,String fileName,String savePath) {
-//        urlStr ="https://video.eyny.com/watch?v=sDVH7TRqR0h";
-        urlStr ="https://a210.static-file.com/cache/9d1d034PFHyubtvo0QxmyPjSQUWZDnthzrmS3FT5UUftgpP9j40trSySptbYr5PPecgwOjNeqlB5/video/995b59e24f4fa37b69d8212ffaf70919/5b74e96c/mp4/v12/180815/6cf6b667c45c58862f101f243df3e48a.mp4?s=128";
-        fileName = "a.mp4";
-        savePath = "d:/resource";
         HttpRequestUtil.downLoadMoviceFromUrl(urlStr,fileName,savePath);
 
     }
