@@ -33,16 +33,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!--starter-acturator-->
+		<!--starter-acturator 执行器-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!--acturator-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-actuator</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-actuator</artifactId>-->
+		<!--</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -111,11 +111,45 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<!--activeMq-->
+		<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-activemq</artifactId>
+		</dependency>
+		<!--amq pool-->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-pool</artifactId>
+			<!--<version>5.7.0</version>-->
+		</dependency>
+		<!--activeMq client-->
+		<!--<dependency>-->
+			<!--<groupId>org.apache.activemq</groupId>-->
+			<!--<artifactId>activemq-client</artifactId>-->
+		<!--</dependency>-->
+		<!--protobuf-->
+		<!--<dependency>-->
+			<!--<groupId>org.apache.activemq.protobuf</groupId>-->
+			<!--<artifactId>activemq-protobuf</artifactId>-->
+			<!--<version>1.1</version>-->
+		<!--</dependency>-->
+		<!---->
+		<!--<dependency>-->
+			<!--<groupId>org.apache.activemq</groupId>-->
+			<!--<artifactId>activemq-core</artifactId>-->
+			<!--<version>5.7.0</version>-->
+		<!--</dependency>-->
+		<!--@data-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.16.16</version>
 		</dependency>
+		<!--自动装备-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-autoconfigure</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
