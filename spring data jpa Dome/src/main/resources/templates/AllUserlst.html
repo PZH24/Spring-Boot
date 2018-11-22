@@ -26,14 +26,14 @@
         pageList:[20,40,60,80,100],
         fitcolumns:true,
         nowrap:true" style="width:100%;height:100%;">
-    <thead>
-    <tr>
-        <th data-options="field:'ck',checkbox:true"></th>
-        <th data-options="field:'RID'," hidden="true">RID</th>
-        <th data-options="field:'userName'">用户名</th>
-        <th data-options="field:'rigth'"  formatter="getRigthType"> 权限</th>
-    </tr>
-    </thead>
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th data-options="field:'ck',checkbox:true"></th>-->
+        <!--<th data-options="field:'RID'," hidden="true">RID</th>-->
+        <!--<th data-options="field:'userName'">用户名</th>-->
+        <!--<th data-options="field:'rigth'"  formatter="getRigthType"> 权限</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
 </table>
 <script type="text/javascript">
     function getRigthType(value,rowIndex,rowData){
@@ -52,6 +52,12 @@
                break
        }
     }
+    var col ={};
+    $(function(){
+        $('#showUser').datagrid({
+            columns: col,
+        });
+    });
 </script>
 </body>
 </html>

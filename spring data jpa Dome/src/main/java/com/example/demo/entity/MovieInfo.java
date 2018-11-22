@@ -21,4 +21,6 @@ public class MovieInfo {
     private  String movieUrl;
     @Column(length = 500)
     private  String imgUrl;
+    @Column(length = 50)
+    private  String type;
 }

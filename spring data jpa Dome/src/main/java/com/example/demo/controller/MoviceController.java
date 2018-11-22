@@ -55,5 +55,10 @@ public class MoviceController {
 
         movice80sService.downloadThread(url,fileName,savePath);
     }
+    @GetMapping("reptile/downloadThread/")
+    public void dec(String url,String fileName,String savePath){
+
+        movice80sService.downloadThread(url,fileName,savePath);
+    }
 
 }

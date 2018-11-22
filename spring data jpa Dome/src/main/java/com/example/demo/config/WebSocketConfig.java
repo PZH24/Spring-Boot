@@ -24,7 +24,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
     //设置消息代理
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        //设置主题
+        //设置主题；也可以设置queue  队列
         registry.enableSimpleBroker("/topic");
     }
     @Bean
