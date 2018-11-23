@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/css/icon.css">
+    <link rel="stylesheet" type="text/css" href="/css/tmpcss.css">
+    <title>boot</title>
+</head>
+<body>
+<form method="post">
+<a>用户名：</a><input type="text" style="width: 200px" id="username"><br/>
+<a>密码：</a><input type="password" style="width: 200px" id="password"><br/>
+<a id ="cqlx">权限: </a> <input class="easyui-combobox" type="text" id="dbclx" name="dbclx" style="width:100px;display: none" /><br/>
+<input id="summit" type="submit" title="保存" onclick="addUser"/><br/>
+</form>
+</body>
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/js/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" >
+    var combobox=[
+        {"value":"1","text":"只读","selected":true},
+        {"value":"3","text":"编辑"},
+        {"value":"127","text":"超级管理员"},
+        // {"value":"LQ","text":"林权"},
+    ];
+    $(function(){
+        initCommbox();
+    });
+    function initCommbox() {
+        $('#dbclx').combobox({
+            data:combobox,
+            valueField:"value",
+            textField:"text",
+            editable:false,
+            panelHeight:true,
+            onLoadSuccess:function(data){
+                console.log(data);
+            },
+        });
+    }
+    function summit() {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var rigth = $('#dbclx').combobox('getValue');
+        var  data = {
+            username: username,
+            password:password,
+            rigth:rigth,
+        }
+        $.ajax({
+            url:"/addUser",
+            type:'POST',
+            data:data,
+            success:function(data){
+                if(data){
+                    window.location.href = "login"
+                }
+                else{
+                    $.messager.show({title: '消息提示', msg: '注册失败', timeout: 1000,});
+                }
+            },
+            error:function(data){
+                console.log('注册失败');
+                $.messager.show({title: '消息提示', msg: '注册失败', timeout: 1000,});
+            }
+        });
+    }
+</script>
+</html>

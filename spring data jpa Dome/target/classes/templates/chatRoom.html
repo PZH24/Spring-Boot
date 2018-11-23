@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chatRoom websocket</title>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/js/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/css/icon.css">
+    <link rel="stylesheet" type="text/css" href="/css/tmpcss.css">
+</head>
+<body>
+
+<label for="message_content">聊&nbsp;&nbsp;天&nbsp;&nbsp;室&nbsp;</label><textarea id="message_content" readonly="readonly" cols="57" rows="10">
+
+</textarea>
+
+<br/>
+
+
+<label for="in_user_name">用户姓名 &nbsp;</label><input id="in_user_name" value=""/>
+<button id="btn_join">加入聊天室</button>
+<button id="btn_exit">离开聊天室</button>
+
+<br/><br/>
+
+<label for="in_room_msg">群发消息 &nbsp;</label><input id="in_room_msg" value=""/>
+<button id="btn_send_all">发送消息</button>
+
+
+<br/><br/><br/>
+
+好友聊天
+<br/>
+<label for="in_sender">发送者 &nbsp;</label><input id="in_sender" value="" readonly="readonly"/><br/>
+<label for="in_receive">接受者 &nbsp;</label><input id="in_receive" class="easyui-combobox"  data-options="valueField:'value',textField:'text'"/><br/>
+<label for="in_point_message">消息体 &nbsp;</label><input id="in_point_message" value=""/><button id="btn_send_point">发送消息</button>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var urlPrefix ='ws://localhost:8088/chatRoom/';
+        var ws = null;
+        $('#btn_join').click(function(){
+            var username = $('#in_user_name').val();
+            if(!username)$.messager.alert("提示", "用户名不能为空", "info");
+            var url = urlPrefix + username;
+            ws = new WebSocket(url);
+            ws.onopen = function () {
+                console.log("建立 websocket 连接...");
+                $('#in_sender').val(username)
+                $('#in_user_name').attr('readonly', 'readonly');//赋值；移除
+                $('#btn_join').attr('disabled', true)
+                $('#in_receive').combobox({
+                    url: '/chatRoom/getOnlineChatFriend/' + username
+                });
+            }
+            ws.onmessage = function(event){
+                if(!event)return;
+                if(event.data.indexOf("##")!=-1){
+                    $('#in_receive').combobox('reload');
+                }
+                //服务端发送的消息
+                $('#message_content').append(event.data+'\n');
+            };
+            ws.onclose = function(){
+                $('#message_content').append('用户['+username+'] 已经离开聊天室!');
+                ws =null;
+                console.log("关闭 websocket 连接...");
+            }
+        });
+        //客户端发送消息到服务器
+        $('#btn_send_all').click(function(){
+            var msg = $('#in_room_msg').val();
+            if(ws){
+                ws.send(msg);
+            }
+            else{
+                $.messager.alert("提示", "请加入聊天室才能发送消息", "info");
+            }
+        });
+        // 退出聊天室
+        $('#btn_exit').click(function(){
+            if(ws){
+                $('#in_user_name').removeAttr('readonly');//移除
+                $('#btn_join').attr('disabled',false)//可点击
+                $('#in_sender').val("");
+                ws.close();
+                ws =null;
+            }
+        });
+
+        $("#btn_send_point").click(function() {
+            if(!ws){
+                $.messager.alert("提示", "请加入聊天室才能发送消息", "info");
+                return;
+            }
+            var sender = $("#in_sender").val();
+            var receive = $("#in_receive").val();
+            var message = $("#in_point_message").val();
+            $.get("/chatRoom/"+sender+"/to/"+receive+"?message="+message,function() {
+                $('#message_content').append(sender+":->"+receive+":"+message+'\n');
+                $("#in_point_message").val("");
+                //$.messager.alert("提示", "发送成功", "info");
+            })
+        })
+
+    })
+</script>
+
+</html>
